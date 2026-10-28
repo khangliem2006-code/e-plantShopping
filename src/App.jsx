@@ -6,12 +6,24 @@ import "./App.css";
 
 function App() {
   const [page, setPage] = useState("home");
+  const [showProductList, setShowProductList] = useState(false);
 
   const navigateTo = (nextPage) => {
     setPage(nextPage);
+
+    if (nextPage === "plants") {
+      setShowProductList(true);
+    } else {
+      setShowProductList(false);
+    }
   };
 
-  if (page === "plants") {
+  const handleGetStartedClick = () => {
+    setShowProductList(true);
+    setPage("plants");
+  };
+
+  if (page === "plants" && showProductList) {
     return <ProductList onNavigate={navigateTo} />;
   }
 
@@ -20,33 +32,39 @@ function App() {
   }
 
   return (
-    <main className="landing-page">
-      <header className="landing-navbar">
-        <h2>🌿 Paradise Nursery</h2>
-        <button onClick={() => navigateTo("plants")}>
-          View Plants
-        </button>
-      </header>
+    <div className="app-container">
+      <main className="landing-page">
+        <div className="background-image"></div>
+        
+        <header className="landing-navbar">
+          <h2>🌿 Paradise Nursery</h2>
 
-      <section className="hero-content">
-        <h1>Paradise Nursery</h1>
-        <h2>Bring Nature Into Your Home</h2>
+          <button onClick={() => navigateTo("plants")}>
+            View Plants
+          </button>
+        </header>
 
-        <p>
-          Discover beautiful indoor plants to make your home greener,
-          fresher, and more relaxing.
-        </p>
+        <section className="hero-content">
+          <h1>Welcome to Paradise Nursery</h1>
 
-        <button
-          className="get-started-button"
-          onClick={() => navigateTo("plants")}
-        >
-          Get Started
-        </button>
-      </section>
+          <h2>Bring Nature Into Your Home</h2>
 
-      <AboutUs />
-    </main>
+          <p>
+            Discover beautiful indoor plants to make your home greener,
+            fresher, and more relaxing.
+          </p>
+
+          <button
+            className="get-started-button"
+            onClick={handleGetStartedClick}
+          >
+            Get Started
+          </button>
+        </section>
+
+        <AboutUs />
+      </main>
+    </div>
   );
 }
 

@@ -20,13 +20,50 @@ button {
   font-family: inherit;
 }
 
-.landing-page {
+/* Main application container */
+.app-container {
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(10, 35, 20, 0.62), rgba(10, 35, 20, 0.65)),
-    url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=2000&q=80")
-      center/cover fixed;
+  width: 100%;
+}
+
+/* Landing page */
+.landing-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
   color: white;
+  overflow: hidden;
+}
+
+/* Background image required by the project rubric */
+.background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      rgba(10, 35, 20, 0.62),
+      rgba(10, 35, 20, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=2000&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Keep landing page content above the background */
+.landing-navbar,
+.hero-content,
+.about-us-container {
+  position: relative;
+  z-index: 1;
+  padding: 35px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  color: #24352a;
 }
 
 .landing-navbar {
@@ -92,7 +129,7 @@ button {
   color: #24352a;
 }
 
-.about-us h2 {
+.about-us-container h2 {
   margin-top: 0;
 }
 

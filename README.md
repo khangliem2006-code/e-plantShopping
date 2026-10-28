@@ -1,4 +1,4 @@
-# Paradise Nursery Shopping Application
+# e-plantShopping
 
 ## Project Overview
 

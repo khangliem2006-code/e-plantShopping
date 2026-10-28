@@ -1,16 +1,83 @@
-# React + Vite
+# Paradise Nursery Shopping Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+Paradise Nursery is a React-based online plant shopping application. Users can browse houseplants by category, add plants to their shopping cart, manage item quantities, and view the total cost of their selections.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Landing page introducing Paradise Nursery.
+- Plant catalog organized into categories.
+- Plant cards displaying images, names, descriptions, and prices.
+- Add-to-cart functionality.
+- Shopping cart with item quantities and subtotals.
+- Increase and decrease item quantities.
+- Remove items from the shopping cart.
+- Dynamic cart item count and total price.
+- Checkout notification.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- JavaScript
+- Redux Toolkit
+- React Redux
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```text
+paradise-nursery/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── AboutUs.jsx
+│   ├── CartSlice.jsx
+│   ├── CartItem.jsx
+│   ├── CartItem.css
+│   ├── ProductList.jsx
+│   ├── ProductList.css
+│   ├── plants.js
+│   ├── store.js
+│   └── main.jsx
+├── index.html
+├── package.json
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+Install Node.js and npm before running the application.
+
+### Installation
+
+Clone the repository and enter the project directory:
+
+```bash
+git clone https://github.com/khangliem2006-code/paradise-nursery.git
+cd paradise-nursery
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+### Run the Application
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal.
+
+## Author
+
+Paradise Nursery Shopping Application — Coursera React Final Project.

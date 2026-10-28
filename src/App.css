@@ -1,0 +1,108 @@
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #24352a;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.landing-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(10, 35, 20, 0.62), rgba(10, 35, 20, 0.65)),
+    url("https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=2000&q=80")
+      center/cover fixed;
+  color: white;
+}
+
+.landing-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.landing-navbar h2 {
+  margin: 0;
+}
+
+.landing-navbar button,
+.get-started-button {
+  border: none;
+  border-radius: 8px;
+  padding: 13px 24px;
+  background: #d5efb8;
+  color: #24442b;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.landing-navbar button:hover,
+.get-started-button:hover {
+  background: #b9df91;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 85px 24px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  margin-bottom: 15px;
+  font-size: clamp(38px, 6vw, 68px);
+}
+
+.hero-content h2 {
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+.hero-content p {
+  max-width: 650px;
+  margin: 20px auto 30px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.get-started-button {
+  font-size: 18px;
+  padding: 15px 32px;
+}
+
+.about-us {
+  padding: 35px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  color: #24352a;
+}
+
+.about-us h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .landing-navbar {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hero-content {
+    padding-top: 55px;
+  }
+}
